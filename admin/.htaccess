@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteRule ^update_blog/([a-zA-Z0-9-]+) update_blog.php?alias=$1
+RewriteRule ^manage_orders/([a-zA-Z0-9-]+) manage_orders.php?status=$1
+RewriteRule ^newsletter/([a-zA-Z0-9-]+) newsletter.php?send=$1
+RewriteRule ^order_details/([a-zA-Z0-9-]+) order_details.php?id=$1
+RewriteRule ^add_coupon/([a-zA-Z0-9-]+) add_coupon.php?id=$1
+RewriteRule ^update_testimonial/([a-zA-Z0-9-]+) update_testimonial.php?id=$1
+RewriteRule ^update_user_details/([a-zA-Z0-]+) update_user_details.php?id=$1
